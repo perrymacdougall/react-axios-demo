@@ -35,7 +35,7 @@ export default class Create extends Component {
         return (
             <div style={{ marginTop: 50 }}>
                 <h3>Add New Server</h3>
-                <form>
+                <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label>Add Host Name: </label>
                         <input type="text" className="form-control" value={this.state.name} onChange={this.onChangeHostName} />
