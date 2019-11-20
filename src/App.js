@@ -10,15 +10,19 @@ class App extends Component {
     return (
       <Router>
         <div className="container">
-          <h2>Welcome to my React Axios Demo</h2>
-          <ul>
-            <li><Link to={'/create'}>Create</Link></li>
-            <li><Link to={'/index'}>List</Link></li>
-          </ul>
-          <hr />
+          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <a className="navbar-brand">React Express App</a>
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul className="navbar-nav mr-auto">
+                <li className="nav-item"><Link to={'/create'} className="nav-link">Create</Link></li>
+                <li className="nav-item"><Link to={'/index'} className="nav-link">List</Link></li>
+              </ul>
+              <hr />
+            </div>
+          </nav><br />
           <Switch>
             <Route exact path='/create' component={Create} />
-            <Route exact path='/index' component={Index} />
+            <Route path='/index' component={Index} />
           </Switch>
         </div>
       </Router>
